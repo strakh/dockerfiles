@@ -13,8 +13,6 @@ RUN apt-get update \
   && rm -rf /build/* \
   && rm -rf /tmp/* /var/tmp/* \
   && rm -rf /usr/share/doc/* \
-  && rm -rf /var/lib/apt/lists/*
-RUN ln -s /usr/bin/clang-4.0 /usr/bin/clang
-RUN ln -s /usr/bin/clang-4.0 /usr/bin/clang-3.5
-RUN ln -s /usr/bin/clang++-4.0 /usr/bin/clang++
-RUN ln -s /usr/bin/clang++-4.0 /usr/bin/clang++-3.5
+  && rm -rf /var/lib/apt/lists/* \
+  && ln -s /usr/bin/clang-4.0 /usr/bin/clang \
+  && ln -s /usr/bin/clang++-4.0 /usr/bin/clang++
